@@ -80,23 +80,25 @@ function getZipcode(event) {
       $zipcode.focus();
     }
     else {
-    $output.innerHTML = `
-      <article class="message">
-        <div class="message-header">
-          <p>CEP: <strong>${$zipcode.value}</strong></p>
-          <button class="delete"></button>
-        </div>
-        <div class="message-body">
-          <ul>
-            <li><strong>Endereço: </strong>${data.logradouro}</li>
-            <li><strong>Complemento: </strong>${data.complemento}</li>
-            <li><strong>Bairro: </strong>${data.bairro}</li>
-            <li><strong>Cidade: </strong>${data.localidade}</li>
-            <li><strong>Estado: </strong>${data.uf}</li>
-          </ul>
-        </div>
-      </article>
-    `;
+      $output.innerHTML = `
+        <article class="message">
+          <div class="message-header">
+            <p>CEP: <strong>${$zipcode.value}</strong></p>
+            <button class="delete"></button>
+          </div>
+          <div class="message-body">
+            <ul>
+              <li><strong>Endereço: </strong>${data.logradouro}</li>
+              <li><strong>Complemento: </strong>${data.complemento}</li>
+              <li><strong>Bairro: </strong>${data.bairro}</li>
+              <li><strong>Cidade: </strong>${data.localidade}</li>
+              <li><strong>Estado: </strong>${data.uf}</li>
+            </ul>
+          </div>
+        </article>
+      `;
+      $zipcode.value = "";
+      $zipcode.blur();
     }
   })
   .catch(err => console.warn(err));
