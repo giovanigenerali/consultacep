@@ -11,6 +11,9 @@
 .main {
   flex: 1;
 }
+.hero-body {
+  padding: 1.5rem;
+}
 #output {
   padding-top: 1.6rem; 
 }
