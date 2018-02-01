@@ -44,7 +44,7 @@ function getZipcode(event) {
   // Request zipcode using fetch API
   fetch(`https://viacep.com.br/ws/${$zipcode.value}/json/`)
   .then(response => {
-    
+
     loading('off');
 
     if (response.status != 200) {
@@ -59,7 +59,7 @@ function getZipcode(event) {
       `;
       $zipcode.focus();
       throw Error(response.status);
-    } 
+    }
     else {
       return response.json();
     }
@@ -120,7 +120,7 @@ function closeOutput(event) {
 
 // Loading
 function loading(status) {
-  let is_invisible = (status == '') ? '' : 'is-invisible';
+  let is_invisible = (status == 'on') ? '' : 'is-invisible';
   $output.innerHTML = `
     <div class="has-text-centered">
       <span class="button is-white is-size-2 is-loading ${is_invisible}"></span>
