@@ -12,6 +12,9 @@ const msg = {
   "zipcode_error": "Ocorreu um erro ao realizar a consulta do CEP, tente novamente.",
 };
 
+// Apply mask
+VMasker($zipcode).maskPattern("99999-999");
+
 // Listener for form search
 document.querySelector('#search').addEventListener('submit', getZipcode);
 
@@ -97,8 +100,6 @@ function getZipcode(event) {
           </div>
         </article>
       `;
-      $zipcode.value = "";
-      $zipcode.blur();
     }
   })
   .catch(err => console.warn(err));
