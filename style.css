@@ -11,13 +11,16 @@
   flex: 1;
 }
 .hero-body {
-  padding: 1rem 2rem;
+  padding: 1rem;
+}
+.section {
+  padding: 1.5rem;
 }
 #output {
-  padding-top: 1.6rem; 
+  padding: 1rem 0; 
 }
 .footer {
-  padding: 1rem;
+  padding: .8rem;
 }
 .github-corner svg {
   position: absolute; 
