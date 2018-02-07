@@ -6,7 +6,7 @@
 ## Visão Geral
 [https://consultacep.cf](https://consultacep.cf)
 
-- ConsultaCEP é uma aplicação básica para consulta de CEP.
+- Consulta CEP é uma aplicação básica para consulta de CEP.
 
 - Foi construida com [javascript puro (vanilla)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide), sem dependências de frameworks.
 
@@ -23,6 +23,18 @@
 ![screnshot3](screenshots/3.png)
 
 ![screnshot4](screenshots/4.png)
+
+# Chrome Extension
+
+[https://chrome.google.com/webstore/detail/consulta-cep/fnkbnkaiiillogimicfejcpibdbhgkig](https://chrome.google.com/webstore/detail/consulta-cep/fnkbnkaiiillogimicfejcpibdbhgkig)
+
+![extensionscrenshot1](chrome-extension/screenshots/1.png)
+
+![extensionscrenshot2](chrome-extension/screenshots/2.png)
+
+![extensionscrenshot3](chrome-extension/screenshots/3.png)
+
+![extensionscrenshot4](chrome-extension/screenshots/4.png)
 
 ## Autores
 * [@giovanigenerali](https://github.com/giovanigenerali)
