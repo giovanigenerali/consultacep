@@ -14,6 +14,7 @@
 
 - No CSS foi utilizado o framework [Bluma.io](https://bulma.io)
 
+
 ## Preview
 
 ![screnshot1](screenshots/1.png)
@@ -24,9 +25,10 @@
 
 ![screnshot4](screenshots/4.png)
 
+
 # Chrome Extension
 
-[https://chrome.google.com/webstore/detail/consulta-cep/fnkbnkaiiillogimicfejcpibdbhgkig](https://chrome.google.com/webstore/detail/consulta-cep/fnkbnkaiiillogimicfejcpibdbhgkig)
+[![Chrome WebStore](https://developer.chrome.com/webstore/images/ChromeWebStore_Badge_v2_206x58.png)](https://chrome.google.com/webstore/detail/consulta-cep/fnkbnkaiiillogimicfejcpibdbhgkig)
 
 ![extensionscrenshot1](chrome-extension/screenshots/1.png)
 
@@ -35,6 +37,7 @@
 ![extensionscrenshot3](chrome-extension/screenshots/3.png)
 
 ![extensionscrenshot4](chrome-extension/screenshots/4.png)
+
 
 ## Autores
 * [@giovanigenerali](https://github.com/giovanigenerali)
