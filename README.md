@@ -1,7 +1,6 @@
 # ConsultaCEP
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/063e082d-e724-48b4-8a35-f52a9f8e5cc5/deploy-status)](https://app.netlify.com/sites/consultacep-wgenial/deploys)
-
 [![GitHub license](https://img.shields.io/github/license/wgenial/s3-objects-stream-zip-php.svg)](https://github.com/wgenial/s3-objects-stream-zip-php/blob/master/LICENSE)
 
 
