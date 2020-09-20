@@ -1,8 +1,7 @@
 # ConsultaCEP
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/063e082d-e724-48b4-8a35-f52a9f8e5cc5/deploy-status)](https://app.netlify.com/sites/consultacep-wgenial/deploys)
-[![GitHub license](https://img.shields.io/github/license/wgenial/consultacep.svg)](https://github.com/wgenial/consultacep/blob/master/LICENSE)
-
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-blue.svg?style=for-the-badge)](https://github.com/wgenial/consultace/pulls)
+[![GitHub license](https://img.shields.io/github/license/wgenial/consultacep?style=for-the-badge)](https://github.com/wgenial/consultacep/blob/master/LICENSE)
 
 ## Visão Geral
 [https://consultacep.cf](https://consultacep.cf)
