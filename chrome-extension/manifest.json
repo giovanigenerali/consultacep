@@ -7,6 +7,5 @@
   "browser_action": {
     "default_icon": "consultacep-16.png",
     "default_popup": "window.html"
-  },
-  "permissions": ["activeTab"]
+  }
 }
