@@ -39,6 +39,9 @@
 ![extensionscrenshot4](chrome-extension/screenshots/4.png)
 
 
-## Autores
+## Autor
 * [@giovanigenerali](https://github.com/giovanigenerali)
-* [@wgenial](https://github.com/wgenial)
+
+## Colaboradores
+* [@laisfrigerio](https://github.com/laisfrigerio)
+* [@osamuca](https://github.com/osamuca)
