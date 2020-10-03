@@ -59,7 +59,16 @@ function getZipcode(event) {
       $zipcode.focus();
     }
     else {
-      $output.innerHTML = showMessage(data);
+      const message = `
+        <ul>
+          <li><strong>Endereço: </strong>${data.logradouro}</li>
+          <li><strong>Complemento: </strong>${data.complemento}</li>
+          <li><strong>Bairro: </strong>${data.bairro}</li>
+          <li><strong>Cidade: </strong>${data.localidade}</li>
+          <li><strong>Estado: </strong>${data.uf}</li>
+        </ul>
+    `;
+      $output.innerHTML = showMessage(message);
     }
   })
   .catch(err => console.warn(err));
@@ -90,27 +99,14 @@ function loading(status) {
 }
 
 // Show Message on Error, Success or Warning alert
-function showMessage (messageBody, typeMessage = "") {
-  if (typeof messageBody === "object") {
-    const data = messageBody;
-    messageBody = `
-      <ul>
-        <li><strong>Endereço: </strong>${data.logradouro}</li>
-        <li><strong>Complemento: </strong>${data.complemento}</li>
-        <li><strong>Bairro: </strong>${data.bairro}</li>
-        <li><strong>Cidade: </strong>${data.localidade}</li>
-        <li><strong>Estado: </strong>${data.uf}</li>
-      </ul>
-    `;
-  }
-
+function showMessage (message, typeMessage = "") {
   return `
     <article class="message ${typeMessage}">
       <div class="message-header">
         <p>CEP: <strong>${$zipcode.value}</strong></p>
         <button class="delete" aria-label="delete"></button>
       </div>
-      <div class="message-body">${messageBody}</div>
+      <div class="message-body">${message}</div>
     </article>
   `;
 }
