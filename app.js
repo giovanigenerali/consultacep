@@ -30,15 +30,7 @@ function getZipcode(event) {
 
   if (!zipcodeValidation($zipcode.value)) {
     loading('off');
-    $output.innerHTML = `
-      <article class="message is-danger">
-        <div class="message-header">
-          <p>CEP: <strong>${$zipcode.value}</strong></p>
-          <button class="delete" aria-label="delete"></button>
-        </div>
-        <div class="message-body">${msg.zipcode_invalid}</div>
-      </article>
-    `;
+    $output.innerHTML = showMessage(msg.zipcode_invalid, "is-danger");
     $zipcode.focus();
     throw Error(msg.zipcode_invalid);
   }
@@ -51,15 +43,7 @@ function getZipcode(event) {
     loading('off');
 
     if (response.status != 200) {
-      $output.innerHTML = `
-        <article class="message is-danger">
-          <div class="message-header">
-            <p>CEP: <strong>${$zipcode.value}</strong></p>
-            <button class="delete" aria-label="delete"></button>
-          </div>
-          <div class="message-body">${msg.zipcode_error}</div>
-        </article>
-      `;
+      $output.innerHTML = showMessage(msg.zipcode_error, "is-danger");
       $zipcode.focus();
       throw Error(response.status);
     }
@@ -71,35 +55,20 @@ function getZipcode(event) {
     loading('off');
 
     if (data.erro) {
-      $output.innerHTML = `
-      <article class="message is-warning">
-        <div class="message-header">
-          <p>CEP: <strong>${$zipcode.value}</strong></p>
-          <button class="delete" aria-label="delete"></button>
-        </div>
-        <div class="message-body">${msg.zipcode_notfound}</div>
-      </article>
-      `;
+      $output.innerHTML = showMessage(msg.zipcode_notfound, "is-warning");
       $zipcode.focus();
     }
     else {
-      $output.innerHTML = `
-        <article class="message">
-          <div class="message-header">
-            <p>CEP: <strong>${$zipcode.value}</strong></p>
-            <button class="delete"></button>
-          </div>
-          <div class="message-body">
-            <ul>
-              <li><strong>Endereço: </strong>${data.logradouro}</li>
-              <li><strong>Complemento: </strong>${data.complemento}</li>
-              <li><strong>Bairro: </strong>${data.bairro}</li>
-              <li><strong>Cidade: </strong>${data.localidade}</li>
-              <li><strong>Estado: </strong>${data.uf}</li>
-            </ul>
-          </div>
-        </article>
-      `;
+      const message = `
+        <ul>
+          <li><strong>Endereço: </strong>${data.logradouro}</li>
+          <li><strong>Complemento: </strong>${data.complemento}</li>
+          <li><strong>Bairro: </strong>${data.bairro}</li>
+          <li><strong>Cidade: </strong>${data.localidade}</li>
+          <li><strong>Estado: </strong>${data.uf}</li>
+        </ul>
+    `;
+      $output.innerHTML = showMessage(message);
     }
   })
   .catch(err => console.warn(err));
@@ -126,5 +95,18 @@ function loading(status) {
     <div class="has-text-centered">
       <span class="button is-white is-size-2 is-loading ${is_invisible}"></span>
     </div>
+  `;
+}
+
+// Show Message on Error, Success or Warning alert
+function showMessage (message, typeMessage = "") {
+  return `
+    <article class="message ${typeMessage}">
+      <div class="message-header">
+        <p>CEP: <strong>${$zipcode.value}</strong></p>
+        <button class="delete" aria-label="delete"></button>
+      </div>
+      <div class="message-body">${message}</div>
+    </article>
   `;
 }
